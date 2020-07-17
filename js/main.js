@@ -1,0 +1,10 @@
+const message = 'JavaScript is awesome!';
+console.log(message);
+const namber = 123;
+console.log('NAMBER = ', namber);
+// alert(message);
+let isComing = prompt('??????');
+console.log(typeof isComing);
+Number(isComing);
+console.log(typeof isComing);
+console.log(isComing);
