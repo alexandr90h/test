@@ -1,48 +1,39 @@
-const countryName = 'КитаЙ';
-
-const CANCELED_BY_USER = 'Отменено пользователем!';
-const NO_DELIVERY = 'В выбранную страну доставка недоступна.';
-const CNINA = 'Китай';
-const AUSTRALIA = 'Австралия';
-const INDIA = 'Индия';
-const JAMAICA = 'Ямайка';
-let message;
-let price = 0;
-let country;
-if (countryName === null) {
-  message = CANCELED_BY_USER;
-} else {
-  country = countryName[0].toUpperCase() + countryName.slice(1).toLowerCase(); // Write code in this line
-  switch (country) {
-    case CNINA:
-      price = 100;
-      break;
-    case AUSTRALIA:
-      price = 170;
-      break;
-    case INDIA:
-      price = 80;
-      break;
-    case JAMAICA:
-      price = 120;
-      break;
-    // Write code under this line
+function calculateTotalPrice(array, prop) {
+  'use strict';
+  // Write code under this line
+  const arrayItem = [];
+  let message = 0;
+  let summPrice = 0;
+  let summQuantity = 0;
+  for (const arrayItem of array) {
+    if (prop === arrayItem.name) {
+      message += arrayItem.price * arrayItem.quantity;
+    }
   }
-  message = NO_DELIVERY;
+  // console.log(summPrice);
+  // console.log(summQuantity);
+  return message;
 }
-if (price > 0) {
-  // Write code in this line
-  message = `Доставка в ${country} будет стоить ${price} кредитов`;
-}
-console.log(message);
-//если countryName равно "КитаЙ"
-// то значение message будет равно
-// 'Доставка в Китай будет стоить 100 кредитов'
 
-//если countryName равно null
-// то значение message будет равно
-// 'Отменено пользователем!'
+// Объекты и ожидаемый результат
+const products = [
+  { name: 'Радар', price: 1300, quantity: 4 },
+  { name: 'Радар', price: 1280, quantity: 2 },
+  { name: 'Радар', price: 1320, quantity: 1 },
+  { name: 'Сканер', price: 2700, quantity: 1 },
+  { name: 'Сканер', price: 2500, quantity: 3 },
+  { name: 'Дроид', price: 400, quantity: 7 },
+  { name: 'Захват', price: 1200, quantity: 2 },
+];
 
-//если countryName равно "Чили"
-// то значение message будет равно
-// 'В выбранную страну доставка недоступна.'
+console.log(calculateTotalPrice(products, 'Радар'));
+// 9080
+
+console.log(calculateTotalPrice(products, 'Сканер'));
+// 10200
+
+console.log(calculateTotalPrice(products, 'Захват'));
+// 2400
+
+console.log(calculateTotalPrice(products, 'Дроид'));
+// 2800
