@@ -85,19 +85,10 @@ const users = [
   },
 ];
 // Write code under this line
-const getUserNames = function (array) {
-  const newArray = array.map(user=>user.name);
+const getNamesSortedByFriendsCount = array => {
+  const newArray = array.sort((a, b) => a.friends.length() - b.friends.length());
   return newArray;
 };
 
-console.log(getUserNames(users));
-
-/* [
-  "Moore Hensley",
-  "Sharlene Bush",
-  "Ross Vazquez",
-  "Elma Head",
-  "Carey Barr",
-  "Blackburn Dotson",
-  "Sheree Anthony",
-] */
+console.log(getNamesSortedByFriendsCount(users));
+// [ 'Moore Hensley', 'Sharlene Bush', 'Elma Head', 'Carey Barr', 'Blackburn Dotson', 'Sheree Anthony', 'Ross Vazquez' ]
