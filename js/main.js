@@ -87,9 +87,10 @@ const users = [
 // Write code under this line
 const getSortedUniqueSkills = array => {
   const newArray = array.reduce((acc, { skills }) => [...acc, ...skills], '');
-  console.log(newArray);
-  const newUniqueArray = newArray.filter(skill => skill);
-  console.log(newUniqueArray);
+  const newUniqueArray = newArray.filter((value, index, array) => {
+    return array.indexOf(value) === index;
+  }).sort();
+  return newUniqueArray;
 };
 
 console.log(getSortedUniqueSkills(users));
