@@ -85,21 +85,13 @@ const users = [
   },
 ];
 // Write code under this line
-const getSortedUniqueSkills = array => {
-  const newArray = array.reduce((acc, { skills }) => [...acc, ...skills], '');
-  console.log(newArray);
-  const newUniqueArray = newArray.filter(skill => skill);
-  console.log(newUniqueArray);
+const getNamesSortedByFriendsCount = array => {
+  const newArray = [...array];
+  console.log(array);
+  return newArray
+    .sort((a, b) => a.friends.length - b.friends.length)
+    .map(({ name }) => name);
 };
 
-console.log(getSortedUniqueSkills(users));
-/* [ 'adipisicing', 'amet',
- 'anim', 'commodo',
- 'culpa', 'elit',
- 'ex', 'ipsum',
- 'irure', 'laborum',
- 'lorem', 'mollit',
- 'non', 'nostrud',
- 'nulla', 'proident',
- 'tempor', 'velit',
- 'veniam' ]; */
+console.log(getNamesSortedByFriendsCount(users));
+// [ 'Moore Hensley', 'Sharlene Bush', 'Elma Head', 'Carey Barr', 'Blackburn Dotson', 'Sheree Anthony', 'Ross Vazquez' ]
