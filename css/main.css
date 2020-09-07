@@ -1,17 +1,15 @@
 body {
-  background-color: #d1d1d1;
+  background-color: #28cece;
+  padding-top: 15px;
 }
 
-li {
-  background-color: tomato;
-  width: 600px;
-  margin: 10px auto;
-  list-style: none;
+.test-conteiner {
+  display: none;
 }
 
 #form-conteiner {
-  background-color: yellowgreen;
-  width: 200px;
+  background-color: white;
+  width: 300px;
   padding: 15px;
   margin-right: auto;
   margin-left: auto;
@@ -22,6 +20,7 @@ li {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  border-radius: 30px;
 }
 
 #form-conteiner :not(:first-child) {
@@ -57,5 +56,12 @@ td {
   border: 2px solid;
   text-align: center;
   font-weight: 700;
+}
+
+li {
+  background-color: tomato;
+  width: 600px;
+  margin: 10px auto;
+  list-style: none;
 }
 /*# sourceMappingURL=main.css.map */

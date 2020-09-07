@@ -1,20 +1,19 @@
 body {
-  background-color: rgb(209, 209, 209);
+  background-color: #28cece;
+  padding-top: 15px;
 }
-li {
-  background-color: tomato;
-  width: 600px;
-  margin: 10px auto;
-  list-style: none;
+.test-conteiner {
+  display: none;
 }
 #form-conteiner {
-  background-color: yellowgreen;
-  width: 200px;
+  background-color:white;
+  width: 300px;
   padding: 15px;
   margin-right: auto;
   margin-left: auto;
   display: flex;
   flex-direction: column;
+  border-radius: 30px;
   :not(:first-child) {
     margin-top: 10px;
   }
@@ -28,7 +27,7 @@ table {
   margin: auto;
   border: 2px solid;
 }
-tr{
+tr {
   background-color: yellow;
 }
 td {
@@ -36,11 +35,18 @@ td {
   border: 1px solid;
   padding: 2px;
 }
-.summ-box{
+.summ-box {
   width: 200px;
   background-color: rgb(60, 48, 168);
   color: white;
   margin: 1px auto;
   border: 2px solid;
   text-align: center;
-  font-weight: 700;}
+  font-weight: 700;
+}
+li {
+  background-color: tomato;
+  width: 600px;
+  margin: 10px auto;
+  list-style: none;
+}
