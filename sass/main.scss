@@ -15,15 +15,8 @@ body {
   position: relative;
   margin-left: auto;
   margin-right: auto;
-  // width: 300px;
-  // margin-right: auto;
-  // margin-left: auto;
-  // display: flex;
-  // flex-direction: column;
-  // :not(:first-child) {
-  //   margin-top: 10px;
-  // }
 }
+// Декорация =====================================
 .left-decoration-box {
   position: absolute;
   width: 50px;
@@ -55,8 +48,34 @@ body {
   }
 }
 .right-decoration-box {
+  position: absolute;
+  width: 50px;
+  height: 15px;
+  top: 35px;
+  right: -35px;
+  border-radius: 30px;
   content: '';
   background-color: #28cece;
+  &::after {
+    position: absolute;
+    background-color: white;
+    bottom: 15px;
+    right: 5px;
+    width: 60px;
+    height: 15px;
+    content: '';
+    border-radius: 30px;
+  }
+  &::before {
+    position: absolute;
+    content: '';
+    width: 50px;
+    height: 15px;
+    bottom: -15px;
+    right: 20px;
+    background-color: white;
+    border-radius: 30px;
+  }
 }
 .round-box {
   position: absolute;
@@ -68,40 +87,69 @@ body {
   bottom: 50px;
   left: -40px;
 }
-
+//===================================================
 .main-form-box {
-  border: 1px solid;
-  width: 300px;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  border-right: 2px #28cece solid;
+  & input {
+    background: #e9eff6;
+    line-height: 40px;
+    border-width: 0;
+    border-radius: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    outline: none;
+    font-family: 'Roboto', sans-serif;
+    &:not(:first-child) {
+      margin-top: 15px;
+    }
+  }
 }
 .result-box {
-  border: 1px solid;
-  width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+.text-main-form-box,
+.text-result-box {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  color: #707981;
 }
 #button-input {
-  width: 100px;
-  margin-left: auto;
-  margin-right: auto;
+  margin-top: 30px;
+  background: #ce2828;
+  border-bottom: 4px solid #7a1818;
+  color: white;
+  font-size: 14px;
 }
 table {
-  margin: auto;
-  border: 2px solid;
+  padding-top: 15px;
 }
 tr {
-  background-color: yellow;
+  background-color: #707981;
 }
 td {
   text-align: center;
-  border: 1px solid;
-  padding: 2px;
+  border-radius: 20px;
+  padding: 4px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
 }
 .summ-box {
-  width: 200px;
-  background-color: rgb(60, 48, 168);
+  width: auto;
+  background-color: #2828CE;
   color: white;
-  margin: 1px auto;
-  border: 2px solid;
+  padding: 5px;
+  margin-top: 10px;
+  border-radius: 20px;
   text-align: center;
   font-weight: 700;
 }

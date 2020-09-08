@@ -3,6 +3,7 @@ const numberInput = document.querySelector('#number-input');
 const minInput = document.querySelector('#min-input');
 const maxInput = document.querySelector('#max-input');
 const btn = document.querySelector('#button-input');
+const textResultBox = document.querySelector(".text-result-box");
 
 console.log(document.querySelector('table'));
 const clickBtnFun = function () {
@@ -16,7 +17,7 @@ const clickBtnFun = function () {
   const summBox = document.createElement('p');
   summBox.classList.add('summ-box');
   if (document.querySelector('table') === null) {
-    formConteiner.after(tableBox);
+    textResultBox.after(tableBox);
     tableBox.after(summBox);
   } else {
     document.querySelector('table').replaceWith(tableBox);
@@ -27,11 +28,12 @@ const clickBtnFun = function () {
     const tabLine = document.createElement('tr');
     const tabCell = document.createElement('td');
     const tabCellNum = document.createElement('td');
-    tabCellNum.style.backgroundColor = 'red';
+    tabCellNum.style.backgroundColor = '#CE2828';
+    tabCellNum.style.fontWeight = "700";
     tableBox.appendChild(tabLine).append(tabCell, tabCellNum);
     tabCell.textContent = idx + 1;
     tabCellNum.textContent = num;
   });
-  summBox.textContent = obj.sun;
+  summBox.textContent = `Сума: ${obj.sun}`;
 };
 btn.addEventListener('click', clickBtnFun);
