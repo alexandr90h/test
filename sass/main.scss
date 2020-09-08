@@ -6,17 +6,78 @@ body {
   display: none;
 }
 #form-conteiner {
-  background-color:white;
-  width: 300px;
-  padding: 15px;
-  margin-right: auto;
-  margin-left: auto;
+  background-color: white;
   display: flex;
-  flex-direction: column;
+  width: 500px;
   border-radius: 30px;
-  :not(:first-child) {
-    margin-top: 10px;
+  padding: 20px 40px;
+  box-sizing: border-box;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  // width: 300px;
+  // margin-right: auto;
+  // margin-left: auto;
+  // display: flex;
+  // flex-direction: column;
+  // :not(:first-child) {
+  //   margin-top: 10px;
+  // }
+}
+.left-decoration-box {
+  position: absolute;
+  width: 50px;
+  height: 15px;
+  bottom: 35px;
+  left: -30px;
+  border-radius: 30px;
+  content: '';
+  background-color: #28cece;
+  &::after {
+    position: absolute;
+    background-color: white;
+    bottom: 15px;
+    left: 10px;
+    width: 60px;
+    height: 15px;
+    content: '';
+    border-radius: 30px;
   }
+  &::before {
+    position: absolute;
+    content: '';
+    width: 60px;
+    height: 15px;
+    bottom: -15px;
+    left: -10px;
+    background-color: white;
+    border-radius: 30px;
+  }
+}
+.right-decoration-box {
+  content: '';
+  background-color: #28cece;
+}
+.round-box {
+  position: absolute;
+  content: '';
+  width: 15px;
+  height: 15px;
+  border-radius: 30px;
+  background-color: white;
+  bottom: 50px;
+  left: -40px;
+}
+
+.main-form-box {
+  border: 1px solid;
+  width: 300px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.result-box {
+  border: 1px solid;
+  width: 200px;
 }
 #button-input {
   width: 100px;
