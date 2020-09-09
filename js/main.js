@@ -28,8 +28,10 @@ const clickBtnFun = function () {
     const tabLine = document.createElement('tr');
     const tabCell = document.createElement('td');
     const tabCellNum = document.createElement('td');
-    tabCellNum.style.backgroundColor = '#CE2828';
+    tabCellNum.style.backgroundColor = '#d4d4d4';
     tabCellNum.style.fontWeight = "700";
+    tabCellNum.style.width = "90px";
+    // tabCellNum.style.color = "#D1DFEC";
     tableBox.appendChild(tabLine).append(tabCell, tabCellNum);
     tabCell.textContent = idx + 1;
     tabCellNum.textContent = num;

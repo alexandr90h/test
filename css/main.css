@@ -12,9 +12,9 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 500px;
+  max-width: 500px;
   border-radius: 30px;
-  padding: 20px 40px;
+  padding: 15px 30px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   position: relative;
@@ -111,6 +111,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   padding: 20px;
+  padding-left: 0;
   border-right: 2px #28cece solid;
 }
 
@@ -137,10 +138,12 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  width: 100%;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   padding: 20px;
+  padding-right: 0;
 }
 
 .text-main-form-box,
@@ -158,10 +161,19 @@ body {
   border-bottom: 4px solid #7a1818;
   color: white;
   font-size: 14px;
+  -webkit-transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#button-input:hover {
+  background-color: #7a1818;
+  border-bottom: 4px solid #4d0f0f;
 }
 
 table {
   padding-top: 15px;
+  -webkit-transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 tr {
@@ -170,7 +182,8 @@ tr {
 
 td {
   text-align: center;
-  border-radius: 20px;
+  border: 1px #dedede solid;
+  border-radius: 5px;
   padding: 4px;
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
@@ -179,7 +192,7 @@ td {
 
 .summ-box {
   width: auto;
-  background-color: #2828CE;
+  background-color: #2828ce;
   color: white;
   padding: 5px;
   margin-top: 10px;
