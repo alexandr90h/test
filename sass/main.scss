@@ -1,6 +1,8 @@
 body {
   background-color: #28cece;
   padding-top: 15px;
+  padding-left: 40px;
+  padding-right: 40px;
 }
 .test-conteiner {
   display: none;
@@ -31,7 +33,7 @@ body {
     background-color: white;
     bottom: 15px;
     left: 10px;
-    width: 60px;
+    width: 30px;
     height: 15px;
     content: '';
     border-radius: 30px;
@@ -61,7 +63,7 @@ body {
     background-color: white;
     bottom: 15px;
     right: 5px;
-    width: 60px;
+    width: 40px;
     height: 15px;
     content: '';
     border-radius: 30px;
@@ -69,7 +71,7 @@ body {
   &::before {
     position: absolute;
     content: '';
-    width: 50px;
+    width: 30px;
     height: 15px;
     bottom: -15px;
     right: 20px;
@@ -92,16 +94,17 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
+  padding: 10px;
   padding-left: 0;
   border-right: 2px #28cece solid;
   & input {
     background: #e9eff6;
-    line-height: 40px;
+    width: 100px;
+    // line-height: 40px;
     border-width: 0;
     border-radius: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
     outline: none;
     font-family: 'Roboto', sans-serif;
     &:not(:first-child) {
@@ -133,13 +136,13 @@ body {
   font-size: 14px;
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   &:hover {
-    background-color: #7a1818;
-    border-bottom: 4px solid #4d0f0f;
+    background-color: #911d1d;
+    border-bottom: 4px solid #631313;
   }
 }
 table {
   padding-top: 15px;
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 tr {
   background-color: #707981;
