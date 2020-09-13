@@ -24,6 +24,12 @@ body {
   margin-right: auto;
 }
 
+@media screen and (max-width: 480px) {
+  #form-conteiner {
+    max-width: 260px;
+  }
+}
+
 .left-decoration-box {
   position: absolute;
   width: 50px;
@@ -120,16 +126,26 @@ body {
 .main-form-box input {
   background: #e9eff6;
   width: 100px;
+  line-height: 20px;
   border-width: 0;
   border-radius: 20px;
   padding-left: 15px;
   padding-right: 15px;
   outline: none;
   font-family: 'Roboto', sans-serif;
+  font-size: 10px;
 }
 
 .main-form-box input:not(:first-child) {
   margin-top: 15px;
+}
+
+@media screen and (min-width: 480px) {
+  .main-form-box input {
+    width: 200px;
+    line-height: 40px;
+    font-size: 16px;
+  }
 }
 
 .result-box {
@@ -144,7 +160,8 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 20px;
+  padding-left: 10px;
+  padding-top: 10px;
   padding-right: 0;
 }
 
@@ -153,8 +170,15 @@ body {
   margin: 0;
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
-  font-size: 24px;
+  font-size: 15px;
   color: #707981;
+}
+
+@media screen and (min-width: 480px) {
+  .text-main-form-box,
+  .text-result-box {
+    font-size: 24px;
+  }
 }
 
 #button-input {
@@ -162,7 +186,7 @@ body {
   background: #ce2828;
   border-bottom: 4px solid #7a1818;
   color: white;
-  font-size: 14px;
+  font-size: 11px;
   -webkit-transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -170,6 +194,12 @@ body {
 #button-input:hover {
   background-color: #911d1d;
   border-bottom: 4px solid #631313;
+}
+
+@media screen and (min-width: 480px) {
+  #button-input {
+    font-size: 16px;
+  }
 }
 
 table {
@@ -189,7 +219,13 @@ td {
   padding: 4px;
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 12px;
+}
+
+@media screen and (min-width: 480px) {
+  td {
+    font-size: 16px;
+  }
 }
 
 .summ-box {
